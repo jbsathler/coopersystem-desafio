@@ -1,8 +1,8 @@
 <!-- Id Field -->
-<div class="form-group">
+<!-- <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
     <p>{!! $produtos->id !!}</p>
-</div>
+</div> -->
 
 <!-- Nome Field -->
 <div class="form-group">
@@ -12,25 +12,34 @@
 
 <!-- Valor Unitario Field -->
 <div class="form-group">
-    {!! Form::label('valor_unitario', 'Valor Unitario:') !!}
+    {!! Form::label('valor_unitario', 'Valor Unitário:') !!}
     <p>{!! $produtos->valor_unitario !!}</p>
 </div>
 
 <!-- Qtd Estoque Field -->
 <div class="form-group">
-    {!! Form::label('qtd_estoque', 'Qtd Estoque:') !!}
+    {!! Form::label('qtd_estoque', 'Quantidade em Estoque:') !!}
     <p>{!! $produtos->qtd_estoque !!}</p>
 </div>
 
-<!-- Created At Field -->
+<!-- Qtd Estoque Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $produtos->created_at !!}</p>
+    {!! Form::label('qtd_estoque', 'Situação do Produto:') !!}
+    <p>
+        <span class="badge badge-{!! ($produtos->qtd_estoque > 0 ? 'success': 'danger') !!}">
+            {!! ($produtos->qtd_estoque > 0 ? 'Disponível': 'Indisponível') !!}
+        </span>
+    </p>
 </div>
+
+<!-- Created At Field -->
+<!-- <div class="form-group">
+    {!! Form::label('created_at', 'Criado em:') !!}
+    <p>{!! $produtos->created_at !!}</p>
+</div> -->
 
 <!-- Updated At Field -->
-<div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
+<!-- <div class="form-group">
+    {!! Form::label('updated_at', 'Atualizado em:') !!}
     <p>{!! $produtos->updated_at !!}</p>
-</div>
-
+</div> -->
