@@ -13,7 +13,7 @@
 <!-- Valor Unitario Field -->
 <div class="form-group">
     {!! Form::label('valor_unitario', 'Valor Unitário:') !!}
-    <p>{!! $produtos->valor_unitario !!}</p>
+    <p>R$ {!! money_format('%.2n', $produtos->valor_unitario) !!}</p>
 </div>
 
 <!-- Qtd Estoque Field -->
