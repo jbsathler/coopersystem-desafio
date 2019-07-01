@@ -29,7 +29,7 @@ class pedidos extends Model
     use SoftDeletes;
 
     public $table = 'pedidos';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -92,5 +92,11 @@ class pedidos extends Model
         'situacao' => 'required'
     ];
 
-    
+    /**
+     * Get the phone record associated with the user.
+     */
+    public function produto()
+    {
+        return $this->BelongsTo('App\Models\produtos');
+    }
 }

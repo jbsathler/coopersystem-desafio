@@ -19,7 +19,7 @@ class produtos extends Model
     use SoftDeletes;
 
     public $table = 'produtos';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -53,5 +53,11 @@ class produtos extends Model
         'qtd_estoque' => 'required'
     ];
 
-    
+    /**
+     * Get the post that owns the comment.
+     */
+    public function pedido()
+    {
+        return $this->hasOne('App\Models\pedidos');
+    }
 }
