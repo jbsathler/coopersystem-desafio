@@ -18,7 +18,7 @@
 <!-- Qtd Estoque Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('qtd_estoque', 'Quantidade em Estoque:') !!}
-    {!! Form::number('qtd_estoque', null, ['class' => 'form-control']) !!}
+    {!! Form::number('qtd_estoque', null, ['class' => 'form-control', 'min' => '0']) !!}
 </div>
 
 <!-- Submit Field -->
