@@ -42,7 +42,10 @@ class pedidosController extends AppBaseController
      */
     public function create()
     {
-        return view('pedidos.create');
+        $produtos = \App\Models\produtos::pluck('nome', 'id');
+
+        return view('pedidos.create')
+            ->with('produtos', $produtos);
     }
 
     /**
@@ -58,7 +61,7 @@ class pedidosController extends AppBaseController
 
         $pedidos = $this->pedidosRepository->create($input);
 
-        Flash::success('Pedidos saved successfully.');
+        Flash::success('Pedido salvo com sucesso.');
 
         return redirect(route('pedidos.index'));
     }
@@ -75,7 +78,7 @@ class pedidosController extends AppBaseController
         $pedidos = $this->pedidosRepository->find($id);
 
         if (empty($pedidos)) {
-            Flash::error('Pedidos not found');
+            Flash::error('Pedido não encontrado');
 
             return redirect(route('pedidos.index'));
         }
@@ -93,14 +96,17 @@ class pedidosController extends AppBaseController
     public function edit($id)
     {
         $pedidos = $this->pedidosRepository->find($id);
+        $produtos = \App\Models\produtos::pluck('nome', 'id');
 
         if (empty($pedidos)) {
-            Flash::error('Pedidos not found');
+            Flash::error('Pedido não encontrado');
 
             return redirect(route('pedidos.index'));
         }
 
-        return view('pedidos.edit')->with('pedidos', $pedidos);
+        return view('pedidos.edit')
+            ->with('pedidos', $pedidos)
+            ->with('produtos', $produtos);
     }
 
     /**
@@ -116,14 +122,14 @@ class pedidosController extends AppBaseController
         $pedidos = $this->pedidosRepository->find($id);
 
         if (empty($pedidos)) {
-            Flash::error('Pedidos not found');
+            Flash::error('Pedido não encontrado');
 
             return redirect(route('pedidos.index'));
         }
 
         $pedidos = $this->pedidosRepository->update($request->all(), $id);
 
-        Flash::success('Pedidos updated successfully.');
+        Flash::success('Pedido atualizado com successo.');
 
         return redirect(route('pedidos.index'));
     }
@@ -142,14 +148,14 @@ class pedidosController extends AppBaseController
         $pedidos = $this->pedidosRepository->find($id);
 
         if (empty($pedidos)) {
-            Flash::error('Pedidos not found');
+            Flash::error('Pedido não encontrado');
 
             return redirect(route('pedidos.index'));
         }
 
         $this->pedidosRepository->delete($id);
 
-        Flash::success('Pedidos deleted successfully.');
+        Flash::success('Pedidos removido com successo.');
 
         return redirect(route('pedidos.index'));
     }

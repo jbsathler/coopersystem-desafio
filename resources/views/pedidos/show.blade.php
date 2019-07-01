@@ -5,7 +5,7 @@
             <li class="breadcrumb-item">
                 <a href="{!! route('pedidos.index') !!}">Pedidos</a>
             </li>
-            <li class="breadcrumb-item active">Detail</li>
+            <li class="breadcrumb-item active">Detalhe</li>
      </ol>
      <div class="container-fluid">
           <div class="animated fadeIn">
@@ -14,8 +14,8 @@
                      <div class="col-lg-12">
                          <div class="card">
                              <div class="card-header">
-                                 <strong>Details</strong>
-                                  <a href="{!! route('pedidos.index') !!}" class="btn btn-ghost-light">Back</a>
+                                 <strong>Detalhes</strong>
+                                  <a href="{!! route('pedidos.index') !!}" class="btn btn-ghost-light">Voltar</a>
                              </div>
                              <div class="card-body">
                                  @include('pedidos.show_fields')
