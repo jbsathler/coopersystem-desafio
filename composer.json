@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "jbsathler/coopersystem-desafio",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Avaliação Técnica para vaga de Desenvolvedor PHP na CooperSystem.",
     "keywords": [
         "framework",
         "laravel"
