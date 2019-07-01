@@ -31,38 +31,15 @@
     </button>
 
     <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item d-md-down-none">
-            <a class="nav-link" href="#">
-                <i class="icon-bell"></i>
-                <span class="badge badge-pill badge-danger">5</span>
-            </a>
-        </li>
         <li class="nav-item dropdown">
             <a class="nav-link" style="margin-right: 10px" data-toggle="dropdown" href="#" role="button"
                aria-haspopup="true" aria-expanded="false">
                 {!! Auth::user()->name !!}
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header text-center">
-                    <strong>Account</strong>
-                </div>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-envelope-o"></i> Messages
-                    <span class="badge badge-success">42</span>
-                </a>
-                <div class="dropdown-header text-center">
-                    <strong>Settings</strong>
-                </div>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-user"></i> Profile</a>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-wrench"></i> Settings</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-shield"></i> Lock Account</a>
                 <a class="dropdown-item" href="{!! url('/logout') !!}" class="btn btn-default btn-flat"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="fa fa-lock"></i>Logout
+                    <i class="fa fa-lock"></i>Sair
                 </a>
                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
@@ -80,12 +57,12 @@
 </div>
 <footer class="app-footer">
     <div>
-        <a href="https://infyom.com">Infyom </a>
-        <span>&copy; 2019 infyomLabs.</span>
+        <a href="https://jbsathler.github.io">Jaderson Barreto Sathler </a>
+        <span>&copy; 2019.</span>
     </div>
     <div class="ml-auto">
-        <span>Powered by</span>
-        <a href="https://coreui.io">CoreUI</a>
+        <span>Desafio</span>
+        <a href="http://coopersystem.com.br">CooperSystem</a>
     </div>
 </footer>
 </body>

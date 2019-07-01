@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Register | CoreUI | InfyOm Laravel Generator</title>
+    <title>{{config('app.name')}}</title>
     <meta name="description" content="CoreUI Template - InfyOm Laravel Generator">
     <meta name="keyword" content="CoreUI,Bootstrap,Admin,Template,InfyOm,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
@@ -27,16 +27,15 @@
                     <form method="post" action="{{ url('/register') }}">
 
                         {!! csrf_field() !!}
-                        <h1>Register</h1>
-                        <p class="text-muted">Create your account</p>
+                        <h1>Registro</h1>
+                        <p class="text-muted">Cadastre-se</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                <i class="icon-user"></i>
-                              </span>
+                                <span class="input-group-text">
+                                    <i class="icon-user"></i>
+                                </span>
                             </div>
-                            <input type="text" class="form-control {{ $errors->has('name')?'is-invalid':'' }}" name="name" value="{{ old('name') }}"
-                                   placeholder="Full Name">
+                            <input type="text" class="form-control {{ $errors->has('name')?'is-invalid':'' }}" name="name" value="{{ old('name') }}" placeholder="Nome Completo">
                             @if ($errors->has('name'))
                                 <span class="invalid-feedback">
                                     <strong>{{ $errors->first('name') }}</strong>
@@ -60,7 +59,7 @@
                                 <i class="icon-lock"></i>
                               </span>
                             </div>
-                            <input type="password" class="form-control {{ $errors->has('password')?'is-invalid':''}}" name="password" placeholder="Password">
+                            <input type="password" class="form-control {{ $errors->has('password')?'is-invalid':''}}" name="password" placeholder="Senha">
                             @if ($errors->has('password'))
                                 <span class="invalid-feedback">
                                     <strong>{{ $errors->first('password') }}</strong>
@@ -73,16 +72,15 @@
                                 <i class="icon-lock"></i>
                               </span>
                             </div>
-                            <input type="password" name="password_confirmation" class="form-control"
-                                   placeholder="Confirm password">
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="Confirme a senha">
                             @if ($errors->has('password_confirmation'))
                                 <span class="help-block">
                                   <strong>{{ $errors->first('password_confirmation') }}</strong>
                                </span>
                             @endif
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
-                        <a href="{{ url('/login') }}" class="text-center">I already have a membership</a>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Registrar</button>
+                        <a href="{{ url('/login') }}" class="text-center">Já estou registrado</a>
                     </form>
                 </div>
             </div>
