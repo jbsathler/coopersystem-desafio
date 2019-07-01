@@ -7,7 +7,7 @@
 
     <!-- Produto Id Field -->
     <div class="form-group col-sm-6">
-        {!! Form::label('produto_id', 'Produto Id:') !!}
+        {!! Form::label('produto_id', 'Produto:') !!}
         {!! Form::select('produto_id', $produtos, null, ['class' => 'form-control']) !!}
     </div>
 </div>
@@ -15,13 +15,13 @@
 <div class="row">
     <!-- Qtd Pedida Field -->
     <div class="form-group col-sm-6">
-        {!! Form::label('qtd_pedida', 'Qtd Pedida:') !!}
-        {!! Form::number('qtd_pedida', null, ['class' => 'form-control']) !!}
+        {!! Form::label('qtd_pedida', 'Quantidade Pedida:') !!}
+        {!! Form::number('qtd_pedida', null, ['class' => 'form-control', 'min' => '0']) !!}
     </div>
 
     <!-- Data Pedido Field -->
     <div class="form-group col-sm-6">
-        {!! Form::label('data_pedido', 'Data Pedido:') !!}
+        {!! Form::label('data_pedido', 'Data do Pedido:') !!}
         {!! Form::text('data_pedido', null, ['class' => 'form-control','id'=>'data_pedido']) !!}
     </div>
 
@@ -85,13 +85,13 @@
         </div>
 
         <!-- Solicitante Municipio Field -->
-        <div class="form-group col-sm-6">
+        <div class="form-group col-sm-5">
             {!! Form::label('solicitante_municipio', 'Município:') !!}
             {!! Form::text('solicitante_municipio', null, ['class' => 'form-control']) !!}
         </div>
 
         <!-- Solicitante Uf Field -->
-        <div class="form-group col-sm-1">
+        <div class="form-group col-sm-2">
             {!! Form::label('solicitante_uf', 'UF:') !!}
             {!! Form::select('solicitante_uf', ['AC' => 'AC', 'AL' => 'AL', 'AM' => 'AM', 'AP' => 'AP', 'BA' => 'BA', 'CE' => 'CE', 'DF' => 'DF', 'ES' => 'ES', 'GO' => 'GO', 'MA' => 'MA', 'MG' => 'MG', 'MS' => 'MS', 'MT' => 'MT', 'PA' => 'PA', 'PB' => 'PB', 'PE' => 'PE', 'PI' => 'PI', 'PR' => 'PR', 'RJ' => 'RJ', 'RN' => 'RN', 'RO' => 'RO', 'RR' => 'RR', 'RS' => 'RS', 'SC' => 'SC', 'SE' => 'SE', 'SP' => 'SP', 'TO' => 'TO'], null, ['class' => 'form-control']) !!}
         </div>
