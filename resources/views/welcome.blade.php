@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{config('app.name')}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -68,12 +68,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Início</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Registro</a>
                         @endif
                     @endauth
                 </div>
@@ -81,15 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Infyom CoreUI template
-                </div>
-
-                <div class="links">
-                    <a href="http://labs.infyom.com/laravelgenerato">Infyom Labs Docs</a>
-                    <a href="https://laravel.com/docs">Laravel Docs</a>
-                    <a href="https://coreui.io/docs/getting-started/introduction">CoreUI Docs</a>
-                    <a href="https://github.com/laravel/laravel">Laravel GitHub</a>
-                    <a href="https://github.com/InfyOmLabs/laravel-generator">Infyom Labs GitHub</a>
+                   Desafio CooperSystem
                 </div>
             </div>
         </div>
